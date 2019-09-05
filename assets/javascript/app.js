@@ -36,15 +36,20 @@ var unAnswered = 0
 var questionsObj = {
     trivQuestions: [
         {quest: "Who wore #33 for the Celtics?", answer1: "Larry Bird", answer2: "Paul Pierce", answer3: "Walter McCarty", answer4: "Jason Tatum"},
-        {quest: "The Celtics Have How Many NBA Championships?", answer1: "11", answer2: "19", answer3: "17", answer4: "14"},
+        {quest: "The Celtics have how many NBA Championships?", answer1: "11", answer2: "19", answer3: "17", answer4: "14"},
         {quest: "'The Hit Dog' is the nickname for whom?", answer1: "David Ortiz", answer2: "Mo Vaughn", answer3: "John Olerud", answer4: "Nomar Garciapara"},
+        {quest: "Name the Traitor", answer1: "Rajon Rondo", answer2: "Kevin Garnett", answer3: "Avery Bradley", answer4: "Ray Allen"},
+        {quest: "In the 1997 NBA Draft, the Celtics selected who with their first pick?", answer1: "Chauncey Billups", answer2: "Tony Battie", answer3: "Ron Mercer", answer4: "Kenny Anderson"},
     ]
 }
 
-console.log(questionsObj.trivQuestions[0].quest);
+console.log(questionsObj.trivQuestions[1].quest);
 
+// --------- On Start Button Click Function
+$("#button-start").on("click", function(){
+    $("#start-section").empty();
 
-
+})
 
 
 
