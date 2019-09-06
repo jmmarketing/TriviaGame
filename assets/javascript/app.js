@@ -55,7 +55,10 @@ $("#button-start").on("click", function(){
 
 })
 
-
+$("#button-done").on("click", function(){
+    $("#results-section").show();
+    $("#game-section").hide();
+})
 
 
 
