@@ -38,29 +38,46 @@ Main content area shows Title and Start Button.
 
 */
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-var correctAnswers = 0;
-var wrongAnswers = 0;
-var unAnswered = 0
+    var correctAnswers = 0;
+    var wrongAnswers = 0;
+    var unAnswered = 0
+    var timeLeft = 31;
+    var timerCount;
 
-// Better to hard code questions in HTML then hide section with css attribute?
-// Reference later: https://stackoverflow.com/questions/3269136/how-to-add-style-displayblock-to-an-element-using-jquery
-
-
-// --------- On Start Button Click Function
-$("#button-start").on("click", function(){
-    $("#start-section").empty();
-    $("#game-section").show();
-
-})
-
-$("#button-done").on("click", function(){
-    $("#results-section").show();
-    $("#game-section").hide();
-})
+    // Better to hard code questions in HTML then hide section with css attribute?
+    // Reference later: https://stackoverflow.com/questions/3269136/how-to-add-style-displayblock-to-an-element-using-jquery
 
 
+    // --------- On Start Button Click Function -----------
+    $("#button-start").on("click", function () {
+        $("#start-section").empty();
+        $("#game-section").show();
+        timerCount = setInterval(countdown, 1000);
+        countdown();
+
+    })
+
+    // --------- On Done Button Click Function -----------
+    $("#button-done").on("click", function () {
+        $("#results-section").show();
+        $("#game-section").hide();
+    })
+
+
+    // -------------- Countdown Function ----------
+    function countdown() {
+        if (timeLeft === 0) {
+            clearTimeout(timerCount);
+            $("#game-section").hide();
+            $("#results-section").show();
+        } else {
+            timeLeft--;
+            $("#countdown").text(timeLeft);
+
+        }
+    }
 
 
 });
