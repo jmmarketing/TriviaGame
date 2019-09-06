@@ -25,15 +25,8 @@ Main content area shows Title and Start Button.
         - Display "All Done" Message
         - Show Correct, Wrong, and Unanswered count. 
 
-*/
-
-$(document).ready(function() {
-
-var correctAnswers = 0;
-var wrongAnswers = 0;
-var unAnswered = 0
-
-var questionsObj = {
+        ----- Ignore This Object. Started with it, but then decided to hard code in html instead ------
+        var questionsObj = {
     trivQuestions: [
         {quest: "Who wore #33 for the Celtics?", answer1: "Larry Bird", answer2: "Paul Pierce", answer3: "Walter McCarty", answer4: "Jason Tatum"},
         {quest: "The Celtics have how many NBA Championships?", answer1: "11", answer2: "19", answer3: "17", answer4: "14"},
@@ -43,11 +36,22 @@ var questionsObj = {
     ]
 }
 
-console.log(questionsObj.trivQuestions[1].quest);
+*/
+
+$(document).ready(function() {
+
+var correctAnswers = 0;
+var wrongAnswers = 0;
+var unAnswered = 0
+
+// Better to hard code questions in HTML then hide section with css attribute?
+// Reference later: https://stackoverflow.com/questions/3269136/how-to-add-style-displayblock-to-an-element-using-jquery
+
 
 // --------- On Start Button Click Function
 $("#button-start").on("click", function(){
     $("#start-section").empty();
+    $("#game-section").show();
 
 })
 
