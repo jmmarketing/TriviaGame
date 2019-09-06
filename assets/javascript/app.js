@@ -63,6 +63,10 @@ $(document).ready(function () {
     $("#button-done").on("click", function () {
         $("#results-section").show();
         $("#game-section").hide();
+        checkAnswers();
+        checkUnAnswered();
+        $("#numCorrect").text(correctAnswers);
+        $("#numWrong").text(wrongAnswers);
     })
 
 
@@ -72,6 +76,10 @@ $(document).ready(function () {
             clearTimeout(timerCount);
             $("#game-section").hide();
             $("#results-section").show();
+            checkAnswers();
+            checkUnAnswered();
+            $("#numCorrect").text(correctAnswers);
+            $("#numWrong").text(wrongAnswers);
         } else {
             timeLeft--;
             $("#countdown").text(timeLeft);
@@ -79,5 +87,25 @@ $(document).ready(function () {
         }
     }
 
+    // --------------- Check Answers Function -------
 
+    function checkAnswers() {
+
+        for (var i = 1; i <= 5; i++) {
+            var radios = document.getElementsByName('answer' + i);
+            for (var j = 0; j < radios.length; j++) {
+                var checkedRadios = radios[j];
+                if (checkedRadios.value === "correct" && checkedRadios.checked) {
+                    correctAnswers++;
+                } else if (checkedRadios.value === "wrong" && checkedRadios.checked) {
+                    wrongAnswers++;
+                }
+            }
+        }
+    }
+
+    function checkUnAnswered (){
+        unAnswered = 5 - (correctAnswers + wrongAnswers);
+        $("#numUnAns").text(unAnswered);
+    }
 });
