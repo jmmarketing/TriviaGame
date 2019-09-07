@@ -17,7 +17,8 @@
 <body>
 
     <div id="main-content">
-        <h1>Trivia Game</h1>
+        <h1>BOSTON CELTICS TRIVIA</h1>
+        <h2 id="game-rules">Five (5) questions in thirty (30) seconds to test just how true of a Celtics fan you are. Do you have what it takes?</h2>
 
         <div id="start-section">
             <button id="button-start">Start Game</button>
@@ -37,34 +38,35 @@
             <div id="list-of-questions">
 
                 <!-- Question 1-->
-                <h2 id="question1">Who wore #33 for the Celtics?</h2>
+                <h2 id="question">Who wore #33 for the Celtics?</h2>
                 <span>
                     <input type="radio" name="answer1" value="correct">Larry Bird</input>
                     <input type="radio" name="answer1" value="wrong">Paul Pierce</input>
                     <input type="radio" name="answer1" value="wrong">Walter McCarty</input>
                     <input type="radio" name="answer1" value="wrong">Jason Tatum</input>
                 </span>
+                <br><br>
 
                 <!-- Question 2-->
-                <h2 id="question2">The Celtics have how many NBA Championships?</h2>
+                <h2 id="question">The Celtics have how many NBA Championships?</h2>
                 <span>
                     <input type="radio" name="answer2" value="wrong">11</input>
                     <input type="radio" name="answer2" value="wrong">14</input>
                     <input type="radio" name="answer2" value="correct">17</input>
                     <input type="radio" name="answer2" value="wrong">19</input>
                 </span>
-
+                <br><br>
                 <!-- Question 3-->
-                <h2 id="question3">The Hit Dog' is the nickname for whom?</h2>
+                <h2 id="question">The Celtics all time leading scorer is?</h2>
                 <span>
-                    <input type="radio" name="answer3" value="wrong">David Ortiz</input>
-                    <input type="radio" name="answer3" value="correct">Mo Vaugn</input>
-                    <input type="radio" name="answer3" value="wrong">Manny Ramirez</input>
-                    <input type="radio" name="answer3" value="wrong">Nomar Garciapara</input>
+                    <input type="radio" name="answer3" value="wrong">Paul Pierce</input>
+                    <input type="radio" name="answer3" value="correct">John Havlicek</input>
+                    <input type="radio" name="answer3" value="wrong">Kevin McHale</input>
+                    <input type="radio" name="answer3" value="wrong">Bill Russell</input>
                 </span>
 
                 <!-- Question 4-->
-                <h2 id="question4">Name the Traitor!</h2>
+                <h2 id="question">Name the Traitor!</h2>
                 <span>
                     <input type="radio" name="answer4" value="wrong">Rajon Rondo</input>
                     <input type="radio" name="answer4" value="wrong">Kevin Garnett</input>
@@ -73,7 +75,7 @@
                 </span>
 
                 <!-- Question 5-->
-                <h2 id="question5">In the 1997 NBA Draft, the Celtics selected who with their first pick?</h2>
+                <h2 id="question">In the 1997 NBA Draft, the Celtics selected who with their first pick?</h2>
                 <span>
                     <input type="radio" name="answer5" value="correct">Chauncey Billups</input>
                     <input type="radio" name="answer5" value="wrong">Tony Battie</input>
@@ -88,16 +90,19 @@
 
             <!-- DONE BUTTON-->
             <div id="done-section">
-                <button id="button-done">Done</button>
+                <button id="button-done">GINO TIME!</button>
             </div>
             <!-- END DONE BUTTON-->
         </div>
 
          <!-- DISPLAY RESULTS-->
          <div id="results-section">
-                <span><h2>Correct:</h2><h2 id="numCorrect"></h2></span>
-                <span><h2>Wrong:</h2><h2 id="numWrong"></h2></span>
-                <span><h2>Un-answered:</h2><h2 id="numUnAns"></h2></span>
+               <h2>Lets See If Red Auerbach Would Be Proud...</h2>
+               <br>
+                    <span id="results">Correct:</span><span id="numCorrect"></span>
+                    <span id="results">Wrong:</span><span id="numWrong"></span>
+                    <span id="results">Un-answered:</span><span id="numUnAns"></span>
+                    <img src="https://media.giphy.com/media/l0IybF4vymmF76Hba/source.gif">
 
         </div>
 

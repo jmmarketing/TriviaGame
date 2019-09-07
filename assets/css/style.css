@@ -1,4 +1,102 @@
+/* --------------- Custom Font -------------------*/
+
+@font-face {
+    font-family: 'nba_celticsregular';
+    src: url('../fonts/nbaceltics-webfont.woff2') format('woff2'),
+         url('../fonts/nbaceltics-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*----------------- END Custom Font ---------------------*/
+
+/*----------- GENERAL STYLING ------------- */
+
+body{
+    background: url("../images/celtics_bg.jpg") no-repeat center center fixed;
+    font-family: 'nba_celticsregular', Arial, Helvetica, sans-serif;
+
+}
+
+#main-content{
+    background: white;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1{
+    color: #0d6647;
+    font-size: 70px;
+    text-align: center;
+    padding: 35px 5px 15px 5px;
+
+}
+
+h2{ 
+    padding: 0 10%;
+}
+
+/*----------- QUESTIONS & BUTTON STYLING ------------- */
+button{
+    font-family: 'nba_celticsregular', Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color:#0d6647;
+    background:white;
+    border: 5px solid #0d6647;
+    width:80%;
+    margin:20px 10%;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    color:white;
+    background:#0d6647;
+    border: 5px solid #218663;
+}
 #game-section, #results-section{
     display:none;
 }
 
+#question{
+    margin-top: 35px;
+}
+
+
+/*----------- TIMER STYLING ------------- */
+#timer{
+    padding: 5px;
+    border: 5px solid #0d6647;
+    margin:0 30%;
+}
+
+.timerWarning{
+    border: 5px solid #c42222 !important;
+}
+
+
+/*----------- RESULTS SECTION STYLING ------------- */
+input[type=radio]{
+    cursor: pointer;
+}
+#results, #numCorrect, #numWrong, #numUnAns{
+    font-size: 40px;
+}
+#numCorrect, #numWrong, #numUnAns{
+    padding-right: 20px;
+}
+img{
+    margin-top: 20px;
+}
+#numCorrect{
+    color:#0d6647;
+}
+#numWrong{
+    color:#c42222;
+}
+#numUnAns{
+    color:#4d4c4c;
+}

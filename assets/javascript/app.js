@@ -54,6 +54,7 @@ $(document).ready(function () {
     $("#button-start").on("click", function () {
         $("#start-section").empty();
         $("#game-section").show();
+        $("#game-rules").empty();
         timerCount = setInterval(countdown, 1000);
         countdown();
 
@@ -83,8 +84,13 @@ $(document).ready(function () {
         } else {
             timeLeft--;
             $("#countdown").text(timeLeft);
-
         }
+
+        // -------------------- Changes Countdown Box Color At & Under 10 Seconds------
+        if (timeLeft <= 10){
+            $("div#timer").attr({class: "timerWarning"});
+        }
+
     }
 
     // --------------- Check Answers Function -------
@@ -104,6 +110,7 @@ $(document).ready(function () {
         }
     }
 
+    // ------------------ Calculates Unanswered questions ------- 
     function checkUnAnswered (){
         unAnswered = 5 - (correctAnswers + wrongAnswers);
         $("#numUnAns").text(unAnswered);
